@@ -11,7 +11,8 @@ li {
 body {
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: auto 1fr;
+    gap: 1rem;
 }
 
 body > div {
@@ -24,4 +25,45 @@ body > div {
     display: grid;
     align-content: start;
     gap: 1rem;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+    align-items: center;
+}
+
+.header .search {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+.header .profile {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+}
+.profile-pic {
+    background-color: lightgrey;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+}
+
+.header .greeting {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+}
+.greeting .profile-pic {
+    grid-row: 1 / 3;
+    align-self: center;
+
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+}
+.greeting h2 {
+    margin: 0;
 }
